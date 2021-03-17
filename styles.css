@@ -1,0 +1,21 @@
+h1,h3{
+    color: aliceblue;
+}
+
+.indent{
+    text-indent: 30%;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: lightslategray;
+}
+
+.card-header{
+    background-color: palegoldenrod;
+}

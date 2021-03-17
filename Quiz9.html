@@ -1,24 +1,36 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>About Me</title> 
+        <title>Quiz</title> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script>
-          function store() {
-            var givenrollno = document.getElementById("rollno").value;
-            localStorage.setItem("rollno", givenrollno);
+          var question = "q9";
+          var answer = "font-size";
+          function loadAns(){
+            localStorage.setItem(question,answer);
+          }
+          function checkAns(){
+            var correct = parseInt(localStorage.getItem("correct"));
+            var givenanswer = document.quiz.q9.value;
+            if(givenanswer==answer){
+              correct++;
+              correct = correct.toString()
+              localStorage.setItem("correct",correct);
+              localStorage.setItem("attemptquestion9", givenanswer);
+            }
+            else{
+              localStorage.setItem("attemptquestion9", givenanswer);
+            }
 
-            var givencourse = document.getElementById("course").value;
-            localStorage.setItem("course", givencourse);
           }
         </script>
         <link rel="stylesheet" href="styles.css"> 
     </head>
-    <body>
+    <body onload="loadAns()">
 
         <div class="container-fluid" style="background-color: cornflowerblue;">
           <div class="row justify-content-between align-items-center">
@@ -26,7 +38,7 @@
               <h1 class="indent">QUIZ</h1>
             </div>
             <div class="col-sm-6">
-                <h1 class="indent">Login</h1>
+                <h1 class="indent">Question - 9</h1>
             </div>
           </div>
         </div>
@@ -36,23 +48,32 @@
 
         <div class="container">
           <div class="card">
+            <h5 class="card-header">9. Which CSS property is used to control the text size of an element ?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form>
+                <form id="quiz" name="quiz">
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationDefault01">Roll No.</label>
-                      <input type="text" class="form-control" id="rollno" required>
+                      <input type="radio" name="q9" value="font-style"><label>1. font-style</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationDefault03">Course</label>
-                      <input type="text" class="form-control" id="course" required>
+                      <input type="radio" name="q9" value="text-size"><label>2. text-size</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="store()">Submit</button>
-                  <a class="btn btn-primary" href="Quiz1.html" role="button">Next</a>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <input type="radio" name="q9" value="font-size"><label>3. font-size</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <input type="radio" name="q9" value="text-style"><label>4. text-style</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" type="button" onclick="checkAns()">Submit</button>
+                  <a class="btn btn-primary" href="Quiz10.html" role="button">Next</a>
                 </form>
               </p>
             </div>

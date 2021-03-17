@@ -8,17 +8,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script>
-          function store() {
-            var givenrollno = document.getElementById("rollno").value;
-            localStorage.setItem("rollno", givenrollno);
+          var question = "q3";
+          var answer = "z-index";
+          function loadAns(){
+            localStorage.setItem("q3",answer);
+          }
+          function checkAns(){
+            var correct = parseInt(localStorage.getItem("correct"));
+            var givenanswer = document.quiz.q3.value;
+            if(givenanswer==answer){
+              correct++;
+              correct = correct.toString()
+              localStorage.setItem("correct",correct);
+              localStorage.setItem("attemptquestion3", givenanswer);
+            }
+            else{
+              localStorage.setItem("attemptquestion3", givenanswer);
+            }
 
-            var givencourse = document.getElementById("course").value;
-            localStorage.setItem("course", givencourse);
           }
         </script>
         <link rel="stylesheet" href="styles.css"> 
     </head>
-    <body>
+    <body onload="loadAns()">
 
         <div class="container-fluid" style="background-color: cornflowerblue;">
           <div class="row justify-content-between align-items-center">
@@ -26,7 +38,7 @@
               <h1 class="indent">QUIZ</h1>
             </div>
             <div class="col-sm-6">
-                <h1 class="indent">Login</h1>
+                <h1 class="indent">Question - 3</h1>
             </div>
           </div>
         </div>
@@ -36,23 +48,32 @@
 
         <div class="container">
           <div class="card">
+            <h5 class="card-header">3. Suppose we want to arragnge five nos. of DIVs so that DIV4 is placed above DIV1. Now, which css property will we use to control the order of stack?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form>
+                <form id="quiz" name="quiz">
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationDefault01">Roll No.</label>
-                      <input type="text" class="form-control" id="rollno" required>
+                      <input type="radio" name="q3" value="d-index"><label>1.  d-index</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="validationDefault03">Course</label>
-                      <input type="text" class="form-control" id="course" required>
+                      <input type="radio" name="q3" value="s-index"><label>2. s-index</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="store()">Submit</button>
-                  <a class="btn btn-primary" href="Quiz1.html" role="button">Next</a>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <input type="radio" name="q3" value="x-index"><label>3. x-index</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <input type="radio" name="q3" value="z-index"><label>4. z-index</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" type="button" onclick="checkAns()">Submit</button>
+                  <a class="btn btn-primary" href="Quiz4.html" role="button">Next</a>
                 </form>
               </p>
             </div>
