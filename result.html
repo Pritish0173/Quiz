@@ -11,7 +11,7 @@
     </head>
     <body>
 
-        <div class="container-fluid" style="background-color: cornflowerblue;">
+        <!-- <div class="container-fluid" style="background-color: cornflowerblue;">
           <div class="row justify-content-between align-items-center">
             <div class="col-sm-6">
               <h1 class="indent">QUIZ</h1>
@@ -19,6 +19,13 @@
             <div class="col-sm-6">
                 <h1 class="indent">Result</h1>
             </div>
+          </div>
+        </div> -->
+
+        <div class="card mb-3">
+          <img src="quiz header.png" class="card-img-top" alt="Quiz Image" width="2%" height="250px">
+          <div class="card-body text-center" style="background-color: #10c495;">
+              <h1 class="card-title">Result</h1>
           </div>
         </div>
 
@@ -33,13 +40,13 @@
 
                 <p id="rollno" style="color: black; font-size: 150%;">
                   <script>
-                    document.getElementById("rollno").innerHTML = "Roll No: " + localStorage.getItem("rollno");
+                    document.getElementById("rollno").innerHTML = "<strong>Roll No: </strong>" + localStorage.getItem("rollno");
                   </script>
                 </p>
 
                 <p id="course" style="color: black; font-size: 150%;">
                   <script>
-                    document.getElementById("course").innerHTML = "Course: " + localStorage.getItem("course");
+                    document.getElementById("course").innerHTML = "<strong>Course: </strong>" + localStorage.getItem("course");
                   </script>
                 </p>
 
