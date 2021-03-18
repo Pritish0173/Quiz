@@ -51,7 +51,7 @@
             <h5 class="card-header">6. If we want to use a nice looking green dotted border around an image, which css property will we use?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz7.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q6" value="border-color"><label>1.  border-color</label>
@@ -72,8 +72,9 @@
                       <input type="radio" name="q6" value="border-line"><label>4. border-line</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz7.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
+                  <a class="btn btn-primary" href="Quiz7.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>

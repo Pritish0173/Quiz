@@ -51,7 +51,7 @@
             <h5 class="card-header">2. If we don't want to allow a floating div to the left side of an element, which css property will we use?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz3.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q2" value="margin"><label>1.  margin</label>
@@ -72,8 +72,8 @@
                       <input type="radio" name="q2" value="padding"><label>4. padding</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz3.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <a class="btn btn-primary" href="Quiz3.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>

@@ -11,7 +11,7 @@
           var question = "q1";
           var answer = "Id";
           function loadAns(){
-            localStorage.setItem("q1",answer);
+            localStorage.setItem(question,answer);
           }
           function checkAns(){
             var correct = 0;
@@ -51,7 +51,7 @@
             <h5 class="card-header">1. If we want define style for an unique element, then which css selector will we use?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz2.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q1" value="Id"><label>1.  Id</label>
@@ -72,8 +72,8 @@
                       <input type="radio" name="q1" value="name"><label>4. name</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz2.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <a class="btn btn-primary" href="Quiz2.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>

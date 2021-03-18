@@ -51,7 +51,7 @@
             <h5 class="card-header">8. Which attribute can be added to many HTML / XHTML elements to identify them as a member of a specific group ?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz9.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q8" value="Id"><label>1. Id</label>
@@ -72,8 +72,9 @@
                       <input type="radio" name="q8" value="span"><label>4. span</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz9.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
+                  <a class="btn btn-primary" href="Quiz9.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>

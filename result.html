@@ -29,14 +29,25 @@
           <div class="card">
             <h5 class="card-header">Result</h5>
             <div class="card-body">
-              <p class="card-text" id="resulttext">
+              <p class="card-text">
 
+                <p id="rollno" style="color: black; font-size: 150%;">
+                  <script>
+                    document.getElementById("rollno").innerHTML = "Roll No: " + localStorage.getItem("rollno");
+                  </script>
+                </p>
 
-                <h2 id="correctanswers" style="color: black;">
+                <p id="course" style="color: black; font-size: 150%;">
+                  <script>
+                    document.getElementById("course").innerHTML = "Course: " + localStorage.getItem("course");
+                  </script>
+                </p>
+
+                <p id="resulttext" style="color: black; font-size: 150%;">
                   <script>
                     document.getElementById("resulttext").innerHTML = "You got " + localStorage.getItem("correct") + " correct.";
                   </script>
-                </h2>
+                </p>
 
                 <br>
                 

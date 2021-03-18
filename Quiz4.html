@@ -51,7 +51,7 @@
             <h5 class="card-header">4. If we want to wrap a block of text around an image, which css property will we use ?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz5.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q4" value="wrap"><label>1.  wrap</label>
@@ -72,8 +72,9 @@
                       <input type="radio" name="q4" value="align"><label>4. align</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz5.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
+                  <a class="btn btn-primary" href="Quiz5.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>

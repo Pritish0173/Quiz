@@ -51,7 +51,7 @@
             <h5 class="card-header">5. If we want to show an Arrow as cursor, then which value we will use ?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz6.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q5" value="pointer"><label>1.  pointer</label>
@@ -72,8 +72,9 @@
                       <input type="radio" name="q5" value="arr"><label>4. arr</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz6.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
+                  <a class="btn btn-primary" href="Quiz6.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>

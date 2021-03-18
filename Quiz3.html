@@ -51,7 +51,7 @@
             <h5 class="card-header">3. Suppose we want to arragnge five nos. of DIVs so that DIV4 is placed above DIV1. Now, which css property will we use to control the order of stack?</h5>
             <div class="card-body">
               <p class="card-text">
-                <form id="quiz" name="quiz">
+                <form action="Quiz4.html" id="quiz" name="quiz" onsubmit="checkAns()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <input type="radio" name="q3" value="d-index"><label>1.  d-index</label>
@@ -72,8 +72,8 @@
                       <input type="radio" name="q3" value="z-index"><label>4. z-index</label>
                     </div>
                   </div>
-                  <button class="btn btn-primary" type="button" onclick="checkAns();this.disabled=true;">Submit</button>
-                  <a class="btn btn-primary" href="Quiz4.html" role="button">Next</a>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- <a class="btn btn-primary" href="Quiz4.html" role="button">Next</a> -->
                 </form>
               </p>
             </div>
